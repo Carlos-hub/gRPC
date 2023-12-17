@@ -107,5 +107,8 @@ func (c *CategoryService) CreateCategoryStreamBidirectional(stream pb.CategorySe
 			Name:        categoryResult.Name,
 			Description: categoryResult.Description,
 		})
+		if err != nil {
+			return err
+		}
 	}
 }
